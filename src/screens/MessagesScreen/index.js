@@ -17,7 +17,6 @@ import {
 } from 'src/styles/common.styles';
 
 const {
-  TWITTER_LOGO,
   ICON_SETTINGS,
   ERIN,
 } = Images;

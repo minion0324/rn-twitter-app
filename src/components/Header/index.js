@@ -21,18 +21,19 @@ const Container = styled.View`
 `;
 
 const LeftWrap = styled.TouchableOpacity`
-  width: 45px;
+  width: ${props => (props.emptyRight ? 70 : 45)}px;
 `;
 
 const CenterWrap = styled.View`
   flex: 1;
   align-items: center;
   justify-content: center;
-  margin-horizontal: ${MAIN_PADDING}px;
+  margin-left: ${props => (props.emptyLeft ? 0 : MAIN_PADDING)}px;
+  margin-right: ${props => (props.emptyRight ? 0 : MAIN_PADDING)}px;
 `;
 
 const RightWrap = styled.TouchableOpacity`
-  width: 45px;
+  width: ${props => (props.emptyLeft ? 70 : 45)}px;
   align-items: flex-end;
 `;
 
@@ -59,31 +60,48 @@ const Header = ({
   avatar,
   leftIcon,
   onPressLeft,
+  emptyLeft,
   rightIcon,
   onPressRight,
+  emptyRight,
   hasBorder,
 }) => {
   return (
     <Container hasBorder={hasBorder}>
-      <LeftWrap onPress={onPressLeft}>
-        {
-          !!leftIcon
-          ? leftIcon
-          : <AvatarWrap>
-              <AvatarImage source={avatar || AVATAR} />
-            </AvatarWrap>
-        }
-      </LeftWrap>
-      <CenterWrap>
+      {
+        !emptyLeft &&
+        <LeftWrap
+          emptyRight={emptyRight}
+          onPress={onPressLeft}
+        >
+          {
+            !!leftIcon
+            ? leftIcon
+            : <AvatarWrap>
+                <AvatarImage source={avatar || AVATAR} />
+              </AvatarWrap>
+          }
+        </LeftWrap>
+      }
+      <CenterWrap
+        emptyLeft={emptyLeft}
+        emptyRight={emptyRight}
+      >
       {
         !!centerIcon
         ? centerIcon
         : !!title && <Title>{title}</Title>
       }
       </CenterWrap>
-      <RightWrap onPress={onPressRight}>
-        {!!rightIcon && rightIcon}
-      </RightWrap>
+      {
+        !emptyRight &&
+        <RightWrap
+          emptyLeft={emptyLeft}
+          onPress={onPressRight}
+        >
+          {!!rightIcon && rightIcon}
+        </RightWrap>
+      }
     </Container>
   );
 }
@@ -94,8 +112,10 @@ Header.propTypes = {
   avatar: PropTypes.number,
   leftIcon: PropTypes.node,
   onPressLeft: PropTypes.func,
+  emptyLeft: PropTypes.bool,
   rightIcon: PropTypes.node,
   onPressRight: PropTypes.func,
+  emptyRight: PropTypes.bool,
   hasBorder: PropTypes.bool,
 };
 
@@ -105,8 +125,10 @@ Header.defaultProps = {
   leftIcon: null,
   avatar: '',
   onPressLeft: null,
+  emptyLeft: false,
   rightIcon: null,
   onPressRight: null,
+  emptyRight: false,
   hasBorder: false,
 };
 
