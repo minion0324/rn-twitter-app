@@ -13,6 +13,18 @@ import registerScreens from './registerScreens';
 registerScreens();
 
 export function pushApp() {
+  Navigation.setDefaultOptions({
+    layout: {
+      orientation: ['portrait'],
+    },
+    bottomTabs: {
+      titleDisplayMode: 'alwaysHide',
+    },
+    bottomTab: {
+      iconInsets: { top: 10, bottom: 5 },
+    }
+  });
+
   Navigation.setRoot({
     root: {
       sideMenu: {
@@ -30,7 +42,6 @@ export function pushApp() {
                   ],
                   options: {
                     bottomTab: {
-                      iconInsets: { top: 25, bottom: 5 },
                       icon: require('src/assets/images/home.png'),
                       selectedIcon: require('src/assets/images/home-active.png'),
                       testID: 'FIRST_TAB_BAR_BUTTON',
@@ -49,7 +60,6 @@ export function pushApp() {
                   ],
                   options: {
                     bottomTab: {
-                      iconInsets: { top: 25, bottom: 5 },
                       icon: require('src/assets/images/search.png'),
                       selectedIcon: require('src/assets/images/search-active.png'),
                       testID: 'SECOND_TAB_BAR_BUTTON',
@@ -68,7 +78,6 @@ export function pushApp() {
                   ],
                   options: {
                     bottomTab: {
-                      iconInsets: { top: 25, bottom: 5 },
                       icon: require('src/assets/images/notifications.png'),
                       selectedIcon: require('src/assets/images/notifications-active.png'),
                       testID: 'THIRD_TAB_BAR_BUTTON',
@@ -87,7 +96,6 @@ export function pushApp() {
                   ],
                   options: {
                     bottomTab: {
-                      iconInsets: { top: 25, bottom: 5 },
                       icon: require('src/assets/images/messages.png'),
                       selectedIcon: require('src/assets/images/messages-active.png'),
                       testID: 'FOURTH_TAB_BAR_BUTTON',
