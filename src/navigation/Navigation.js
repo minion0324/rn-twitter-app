@@ -1,6 +1,10 @@
 import { Navigation } from 'react-native-navigation';
 
 import {
+  WIDTH,
+} from 'src/constants';
+
+import {
   HOME_SCREEN,
   SEARCH_SCREEN,
   NOTIFICATIONS_SCREEN,
@@ -12,17 +16,33 @@ import registerScreens from './registerScreens';
 
 registerScreens();
 
+export function showDrawer(componentId) {
+  Navigation.mergeOptions(componentId, {
+    sideMenu: {
+      left: {
+        visible: true,
+        width: WIDTH * 0.8,
+      },
+    }
+  });
+}
+
 export function pushApp() {
   Navigation.setDefaultOptions({
     layout: {
       orientation: ['portrait'],
+    },
+    topBar: {
+      visible: false,
+      drawBehind: true,
+      animate: false,
     },
     bottomTabs: {
       titleDisplayMode: 'alwaysHide',
     },
     bottomTab: {
       iconInsets: { top: 5 },
-    }
+    },
   });
 
   Navigation.setRoot({
@@ -107,12 +127,12 @@ export function pushApp() {
           },
         },
         id: 'sideMenu',
-        right: {
+        left: {
           component: {
-            id: 'right.NavigationDrawer',
+            id: 'left.NavigationDrawer',
             name: DRAWER_SCREEN,
             passProps: {
-              componentId: 'right.NavigationDrawer',
+              componentId: 'left.NavigationDrawer',
             },
           },
         },

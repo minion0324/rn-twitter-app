@@ -1,2 +1,5 @@
 export * from './Screens';
-export { pushApp } from './Navigation';
+export {
+  showDrawer,
+  pushApp,
+} from './Navigation';
