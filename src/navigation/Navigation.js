@@ -21,7 +21,7 @@ export function pushApp() {
       titleDisplayMode: 'alwaysHide',
     },
     bottomTab: {
-      iconInsets: { top: 10, bottom: 5 },
+      iconInsets: { top: 5 },
     }
   });
 
