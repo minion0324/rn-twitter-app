@@ -13,4 +13,5 @@ export default {
   ICON_MOMENTS: require(`${PATH}icon-moments.png`),
   ICON_LAMP: require(`${PATH}icon-lamp.png`),
   ICON_CODE: require(`${PATH}icon-code.png`),
+  ICON_ACCOUNT: require(`${PATH}icon-account.png`),
 };

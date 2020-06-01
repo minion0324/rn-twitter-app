@@ -15,6 +15,7 @@ const InnerWrap = styled.View`
 
 const ImageIcon = styled.Image`
   width: ${props => props.size || 30}px;
+  height: ${props => props.size || 30}px;
   resizeMode: contain;
 `;
 

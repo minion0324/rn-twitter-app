@@ -49,6 +49,7 @@ const {
   ICON_MOMENTS,
   ICON_LAMP,
   ICON_CODE,
+  ICON_ACCOUNT,
 } = Images;
 
 const menu = [
@@ -92,6 +93,9 @@ const DrawerScreen = ({ componentId }) => {
             <AvatarWrap>
               <AvatarImage source={ERIN || AVATAR} />
             </AvatarWrap>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <ImageIcon source={ICON_ACCOUNT} size={36} />
           </TouchableOpacity>
         </AvatarHeader>
         <View>
