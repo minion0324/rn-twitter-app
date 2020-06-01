@@ -14,14 +14,14 @@ const Header = styled.View`
 const AvatarHeader = styled.View`
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 10px;
-  margin-bottom: 5px;
+  margin-top: ${HEIGHT * 0.02}px;
+  margin-bottom: ${HEIGHT * 0.01}px;
 `;
 
 const AvatarWrap = styled.View`
-  width: 60px;
+  width: ${HEIGHT * 0.08}px;
   aspect-ratio: 1;
-  border-radius: 36px;
+  border-radius: ${HEIGHT * 0.04}px;
   overflow: hidden;
 `;
 
