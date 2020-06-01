@@ -21,6 +21,7 @@ const SearchInput = styled.TextInput`
   width: 100%;
   font-size: 18px;
   font-weight: 400;
+  padding: 0px;
 `;
 
 const CancelText = styled.Text`

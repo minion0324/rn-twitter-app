@@ -53,23 +53,23 @@ const {
 
 const menu = [
   {
-    icon: <ImageIcon source={ICON_PROFILE} size={24} />,
+    icon: <ImageIcon source={ICON_PROFILE} size={20} />,
     title: 'Profile',
   },
   {
-    icon: <ImageIcon source={ICON_LISTS} size={24} />,
+    icon: <ImageIcon source={ICON_LISTS} size={20} />,
     title: 'Lists',
   },
   {
-    icon: <ImageIcon source={ICON_TOPICS} size={24} />,
+    icon: <ImageIcon source={ICON_TOPICS} size={20} />,
     title: 'Topics',
   },
   {
-    icon: <ImageIcon source={ICON_BOOKMARKS} size={24} />,
+    icon: <ImageIcon source={ICON_BOOKMARKS} size={20} />,
     title: 'Bookmarks',
   },
   {
-    icon: <ImageIcon source={ICON_MOMENTS} size={24} />,
+    icon: <ImageIcon source={ICON_MOMENTS} size={20} />,
     title: 'Moments',
   },
 ];
