@@ -15,11 +15,11 @@ const AvatarHeader = styled.View`
   flex-direction: row;
   justify-content: space-between;
   margin-top: 10px;
-  margin-bottom: 12px;
+  margin-bottom: 5px;
 `;
 
 const AvatarWrap = styled.View`
-  width: 72px;
+  width: 60px;
   aspect-ratio: 1;
   border-radius: 36px;
   overflow: hidden;
@@ -43,7 +43,7 @@ const IdText = styled.Text`
 
 const FollowHeader = styled.View`
   margin-top: 15px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   flex-direction: row;
 `;
 
