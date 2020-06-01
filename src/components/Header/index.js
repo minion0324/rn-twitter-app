@@ -40,7 +40,7 @@ const RightWrap = styled.TouchableOpacity`
 const AvatarWrap = styled.View`
   width: 45px;
   aspect-ratio: 1;
-  border-radius: 18px;
+  border-radius: 23px;
   overflow: hidden;
 `;
 
