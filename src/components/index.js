@@ -9,3 +9,4 @@ export { default as ImageTitle } from './ImageTitle';
 export { default as TrendingItem } from './TrendingItem';
 export { default as MessageItem } from './MessageItem';
 export { default as FullAlert } from './FullAlert';
+export { default as NotificationItem } from './NotificationItem';

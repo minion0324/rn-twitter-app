@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
-import {
-  View,
-} from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
 import { TabView, TabBar } from 'react-native-tab-view';
 
 import {
   Header,
+  FullAlert,
+  ListContainer,
+  NotificationItem,
 } from 'src/components';
 import {
   Images,
   WIDTH,
   HEIGHT,
+  DummyData,
 } from 'src/constants';
 import {
   showDrawer,
@@ -20,6 +22,7 @@ import {
 import {
   Container,
   ImageIcon,
+  Body,
   CircleButton,
 } from 'src/styles/common.styles';
 import {
@@ -36,6 +39,10 @@ const {
   ERIN,
   ICON_HAPPENING,
 } = Images;
+
+const {
+  dummyNotifications,
+} = DummyData;
 
 const NotificationsScreen = ({ componentId }) => {
   const [ index, setIndex ] =useState(0);
@@ -59,6 +66,36 @@ const NotificationsScreen = ({ componentId }) => {
     );
   };
 
+  renderScene = ({ route }) => {
+    const sceneData = dummyNotifications[route.key];
+
+    return (
+      <Body>
+        <ListContainer>
+        {
+          sceneData.map(item => (
+            <TouchableOpacity key={item.id}>
+              <NotificationItem
+                avatars={item.avatars}
+                title={item.title}
+                description={item.description}
+              />
+            </TouchableOpacity>
+          ))
+        }
+        </ListContainer>
+
+        {
+          !sceneData.length &&
+          <FullAlert
+            title={'Nothing to see here -- yet.'}
+            subTitle={'When someone mentions you in a Tweet, you\'ll see it here.'}
+          />
+        }
+      </Body>
+    );
+  }
+
   return (
     <Container>
       <Header
@@ -70,9 +107,7 @@ const NotificationsScreen = ({ componentId }) => {
 
       <TabView
         navigationState={{ index, routes }}
-        renderScene={({ route }) => (
-          <View style={{flex: 1}} />
-        )}
+        renderScene={renderScene}
         renderTabBar={renderTabBar}
         onIndexChange={idx => setIndex(idx)}
         initialLayout={{

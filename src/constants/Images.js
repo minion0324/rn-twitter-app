@@ -25,6 +25,7 @@ export default {
   ICON_ALERT: require(`${PATH}icon-alert.png`),
   ICON_HAPPENING: require(`${PATH}icon-happening.png`),
   ICON_NEW_MESSAGE: require(`${PATH}icon-new-message.png`),
+  ICON_STAR: require(`${PATH}icon-star.png`),
 
   AVATAR1: require(`${PATH}contents/avatar1.png`),
   AVATAR2: require(`${PATH}contents/avatar2.png`),

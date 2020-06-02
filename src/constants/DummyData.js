@@ -548,6 +548,38 @@ const dummyMessages = [
   },
 ];
 
+const dummyNotifications = {
+  first: [
+    {
+      id: 0,
+      avatars: [AVATAR1],
+      title: 'Recent Tweet from SportsCenter',
+      description: 'Before you dive in, make sure to think about the kind of website you’d like for your business.',
+    },
+    {
+      id: 1,
+      avatars: [AVATAR2, AVATAR3],
+      title: 'Do you have a particular model in mind? Must-have features?',
+      description: 'That’s why Best E-Commerce Builders 2018 offers a methodical comparison of the most popular, highly-rated website builders.',
+    },
+    {
+      id: 2,
+      avatars: [AVATAR1],
+      title: 'Recent Tweet from SportsCenter',
+      description: 'We provide information based on first-hand experience with website builders to help you make the best decision for your particular needs and get your store online in no time.',
+    },
+    {
+      id: 3,
+      avatars: [AVATAR2],
+      title: 'Before you dive in, make sure to think about the kind of website you’d like for your business.',
+      description: 'We provide information based on first-hand experience with website builders to help you make the best decision for your particular needs and get your store online in no time.',
+    },
+  ],
+  second: [
+
+  ],
+};
+
 export default {
   dummyNews,
   dummyFollows,
@@ -555,4 +587,5 @@ export default {
   dummyTabs,
   dummySearch,
   dummyMessages,
+  dummyNotifications,
 };
