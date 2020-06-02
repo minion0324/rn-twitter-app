@@ -173,7 +173,7 @@ const NewsItem = ({
               <NameText numberOfLines={1}>{authorName}</NameText>
               { isVerified && <ImageIcon source={ICON_VERIFY} size={18} /> }
               <IdText numberOfLines={1}>{authorId}</IdText>
-              <IdText>{`- ${time}`}</IdText>
+              <IdText>{`• ${time}`}</IdText>
             </NameWrap>
             <ImageIcon source={ARROW} size={18} />
           </ArrowWrap>

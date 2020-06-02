@@ -36,9 +36,9 @@ const CircleButton = styled.TouchableOpacity`
   position: absolute;
   right: 15px;
   bottom: 15px;
-  width: 72px;
+  width: 64px;
   aspect-ratio: 1;
-  border-radius: 36px;
+  border-radius: 32px;
   background-color: #1da1f3;
   align-items: center;
   justify-content: center;
