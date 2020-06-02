@@ -59,7 +59,7 @@ const NameWrap = styled.View`
 
 const NameText = styled.Text`
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   margin-right: 5px;
 `;
 
