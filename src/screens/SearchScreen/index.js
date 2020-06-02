@@ -33,6 +33,10 @@ import {
   Body,
   SectionWrap,
   CircleButton,
+  SearchBar,
+  SearchText,
+  SearchInput,
+  CancelText,
 } from 'src/styles/common.styles';
 import {
   TabBarStyle,
@@ -42,12 +46,6 @@ import {
   TabBarActiveColor,
   TabBarInactiveColor,
 } from 'src/styles/tab.styles';
-import {
-  SearchBar,
-  SearchText,
-  SearchInput,
-  CancelText,
-} from './styled';
 
 const {
   ICON_SETTINGS,

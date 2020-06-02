@@ -9,10 +9,6 @@ const Container = styled.SafeAreaView`
   background-color: white;
 `;
 
-const InnerWrap = styled.View`
-  padding-horizontal: ${MAIN_PADDING}px;
-`;
-
 const ImageIcon = styled.Image`
   width: ${props => props.size || 30}px;
   height: ${props => props.size || 30}px;
@@ -44,11 +40,44 @@ const CircleButton = styled.TouchableOpacity`
   justify-content: center;
 `;
 
+const SearchBar = styled.View`
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7ecf0;
+  padding-vertical: 7px;
+  padding-horizontal: 12px;
+  border-radius: 20px;
+`;
+
+const SearchText = styled.Text`
+  font-size: 18px;
+  font-weight: 400;
+  color: #657688;
+`;
+
+const SearchInput = styled.TextInput`
+  width: 100%;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 0px;
+`;
+
+const CancelText = styled.Text`
+  font-size: 18px;
+  font-weight: 400;
+  color: #1da1f2;
+`;
+
 export {
   Container,
-  InnerWrap,
   ImageIcon,
   Body,
   SectionWrap,
   CircleButton,
+  SearchBar,
+  SearchText,
+  SearchInput,
+  CancelText,
 };

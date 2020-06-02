@@ -17,7 +17,6 @@ import {
 import {
   Container,
   ImageIcon,
-  InnerWrap,
 } from 'src/styles/common.styles';
 
 import {
