@@ -93,7 +93,7 @@ const Footer = styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding-vertical: ${HEIGHT * 0.01}px;
+  padding-vertical: ${HEIGHT * 0.015}px;
   padding-horizontal: ${MAIN_PADDING}px;
   border-top-width: 1px;
   border-top-color: #f2f2f2;

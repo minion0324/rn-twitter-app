@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-import {
-  MAIN_PADDING,
-} from 'src/constants';
-
 const Container = styled.SafeAreaView`
   flex: 1;
   background-color: white;
@@ -23,7 +19,7 @@ const Body = styled.View`
 const SectionWrap = styled.View`
   width: 100%;
   background-color: white;
-  margin-bottom: 15px;
+  margin-bottom: 7px;
   border-bottom-width: 1px;
   border-bottom-color: #f2f2f2;
 `;
@@ -32,9 +28,9 @@ const CircleButton = styled.TouchableOpacity`
   position: absolute;
   right: 15px;
   bottom: 15px;
-  width: 64px;
+  width: 56px;
   aspect-ratio: 1;
-  border-radius: 32px;
+  border-radius: 28px;
   background-color: #1da1f3;
   align-items: center;
   justify-content: center;

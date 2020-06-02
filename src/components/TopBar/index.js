@@ -10,7 +10,7 @@ const ItemContainer = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-vertical: 15px;
+  padding-vertical: 10px;
   padding-horizontal: ${MAIN_PADDING}px;
   border-bottom-width: 1px;
   border-bottom-color: #f2f2f2;

@@ -6,6 +6,11 @@ const {
   AVATAR1,
   AVATAR2,
   AVATAR3,
+  ICON_PROFILE,
+  ICON_LISTS,
+  ICON_TOPICS,
+  ICON_BOOKMARKS,
+  ICON_MOMENTS,
 } = Images;
 
 const dummyNews = [
@@ -16,6 +21,7 @@ const dummyNews = [
     authorId: '@overtime',
     isVerified: true,
     time: '1h',
+    sphere: 'Football',
     contentText:
       'With the rise of online shopping, making the move to an online store has countless benefits.'
       + '\n\nBut the sheer quantity of options for launching a website can be overwhelming.',
@@ -41,6 +47,7 @@ const dummyNews = [
     authorId: '@ashoswai',
     isVerified: true,
     time: '2h',
+    sphere: 'Books',
     contentText:
       'That’s why Best E-Commerce Builders 2018 offers a methodical comparison of the most popular, highly-rated website builders.'
       + '\n\nWe provide information based on first-hand experience with website builders to help you make the best decision for your particular needs and get your store online in no time.',
@@ -86,6 +93,7 @@ const dummyFollows = [
     authorName: 'Overtime',
     authorId: '@overtime',
     isVerified: true,
+    sphere: 'Popular in United States',
     contentText:
       'With the rise of online shopping, making the move to an online store has countless benefits.'
       + '\n\nBut the sheer quantity of options for launching a website can be overwhelming.',
@@ -580,6 +588,38 @@ const dummyNotifications = {
   ],
 };
 
+const dummyMenu = [
+  {
+    icon: ICON_PROFILE,
+    title: 'Profile',
+  },
+  {
+    icon: ICON_LISTS,
+    title: 'Lists',
+  },
+  {
+    icon: ICON_TOPICS,
+    title: 'Topics',
+  },
+  {
+    icon: ICON_BOOKMARKS,
+    title: 'Bookmarks',
+  },
+  {
+    icon: ICON_MOMENTS,
+    title: 'Moments',
+  },
+];
+
+const dummyHelp = [
+  {
+    title: 'Settings and Privacy',
+  },
+  {
+    title: 'Help Center',
+  },
+];
+
 export default {
   dummyNews,
   dummyFollows,
@@ -588,4 +628,6 @@ export default {
   dummySearch,
   dummyMessages,
   dummyNotifications,
+  dummyMenu,
+  dummyHelp,
 };

@@ -1,11 +1,9 @@
 import React from 'react';
-import { View } from 'react-native';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import {
   Images,
-  WIDTH,
   HEIGHT,
   MAIN_PADDING,
 } from 'src/constants';
@@ -17,6 +15,7 @@ import {
 const {
   AVATAR,
   ICON_VERIFY,
+  ICON_SPHERE,
 } = Images;
 
 const ItemContainer = styled.View`
@@ -63,32 +62,50 @@ const NameText = styled.Text`
 `;
 
 const IdText = styled.Text`
-  font-size: 16px;
+  font-size: 18px;
   color: #717b85;
 `;
 
 const FollowWrap = styled.View`
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 `;
 
 const ContentText = styled.Text`
-  font-size: 18px;
+  font-size: 16px;
   margin-top: 5px;
 `;
 
 const FollowButton = styled.TouchableOpacity`
-  padding-vertical: 5px;
-  padding-horizontal: 20px;
+  margin-top: 5px;
+  padding-vertical: 6px;
+  padding-horizontal: 24px;
   border-color: #1da1f3;
   border-width: 1px;
   border-radius: 20px;
 `;
 
 const FollowText = styled.Text`
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 600;
   color: #1da1f3;
+`;
+
+const SphereWrap = styled.View`
+  flex-direction: row;
+  align-items: center;
+`;
+
+const SphereIconWrap = styled.View`
+  width: ${HEIGHT * 0.08}px;
+  align-items: flex-end;
+`;
+
+const SphereText = styled.Text`
+  font-size: 14px;
+  color: #717b85;
+  margin-left: 10px;
 `;
 
 const FollowItem = ({
@@ -101,6 +118,15 @@ const FollowItem = ({
 }) => {
   return (
     <ItemContainer>
+      {
+        !!sphere &&
+        <SphereWrap>
+          <SphereIconWrap>
+            <ImageIcon source={ICON_SPHERE} size={14} />
+          </SphereIconWrap>
+          <SphereText>{sphere}</SphereText>
+        </SphereWrap>
+      }
       <RowView>
         <AvatarWrap>
           <AvatarImage source={avatar || AVATAR} />
@@ -112,7 +138,7 @@ const FollowItem = ({
                 <NameText numberOfLines={1}>
                   {authorName}
                 </NameText>
-                { isVerified && <ImageIcon source={ICON_VERIFY} size={18} /> }
+                { isVerified && <ImageIcon source={ICON_VERIFY} size={14} /> }
               </NameWrap>
               <IdText numberOfLines={1}>{authorId}</IdText>
             </IdWrap>

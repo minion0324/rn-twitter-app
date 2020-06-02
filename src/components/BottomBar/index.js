@@ -1,5 +1,4 @@
 import React from 'react';
-import { View } from 'react-native';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -11,7 +10,7 @@ const ItemContainer = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-vertical: 15px;
+  padding-vertical: 10px;
   padding-horizontal: ${MAIN_PADDING}px;
   border-bottom-width: 1px;
   border-bottom-color: #f2f2f2;
@@ -19,7 +18,7 @@ const ItemContainer = styled.View`
 
 const Title = styled.Text`
   font-size: 16px;
-  color: #1da1f3
+  color: #1da1f3;
 `;
 
 const BottomBar = ({

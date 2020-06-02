@@ -28,12 +28,12 @@ const LeftIcon = styled.TouchableOpacity`
 
 const Title = styled.Text`
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
 `;
 
 const FollowButton = styled.TouchableOpacity`
-  padding-vertical: 5px;
-  padding-horizontal: 20px;
+  padding-vertical: 6px;
+  padding-horizontal: 24px;
   border-color: #1da1f3;
   border-width: 1px;
   border-radius: 20px;
@@ -41,7 +41,8 @@ const FollowButton = styled.TouchableOpacity`
 `;
 
 const FollowText = styled.Text`
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 600;
   color: ${props => (props.isFollow ? '#1da1f3' : 'white')};
 `;
 

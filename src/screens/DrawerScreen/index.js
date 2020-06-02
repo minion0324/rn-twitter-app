@@ -9,10 +9,8 @@ import PropTypes from 'prop-types';
 
 import {
   Images,
+  DummyData,
 } from 'src/constants';
-import {
-  showDrawer,
-} from 'src/navigation';
 
 import {
   Container,
@@ -41,47 +39,15 @@ import {
 const {
   ERIN,
   AVATAR,
-  ICON_PROFILE,
-  ICON_LISTS,
-  ICON_TOPICS,
-  ICON_BOOKMARKS,
-  ICON_MOMENTS,
   ICON_LAMP,
   ICON_CODE,
   ICON_ACCOUNT,
 } = Images;
 
-const menu = [
-  {
-    icon: <ImageIcon source={ICON_PROFILE} size={20} />,
-    title: 'Profile',
-  },
-  {
-    icon: <ImageIcon source={ICON_LISTS} size={20} />,
-    title: 'Lists',
-  },
-  {
-    icon: <ImageIcon source={ICON_TOPICS} size={20} />,
-    title: 'Topics',
-  },
-  {
-    icon: <ImageIcon source={ICON_BOOKMARKS} size={20} />,
-    title: 'Bookmarks',
-  },
-  {
-    icon: <ImageIcon source={ICON_MOMENTS} size={20} />,
-    title: 'Moments',
-  },
-];
-
-const helps = [
-  {
-    title: 'Settings and Privacy',
-  },
-  {
-    title: 'Help Center',
-  },
-];
+const {
+  dummyMenu,
+  dummyHelp,
+} = DummyData;
 
 const DrawerScreen = ({ componentId }) => {
   return (
@@ -119,40 +85,40 @@ const DrawerScreen = ({ componentId }) => {
 
       <ScrollView>
         <MenuWrap>
-        {
-          menu.map(item => (
-            <MenuItem
-              key={item.title}
-            >
-              {item.icon}
-              <MenuTitle>
-                {item.title}
-              </MenuTitle>
-            </MenuItem>
-          ))
-        }
+          <FlatList
+            data={dummyMenu}
+            keyExtractor={item => item.title}
+            renderItem={({ item }) => (
+              <MenuItem>
+                <ImageIcon source={item.icon} size={20} />
+                <MenuTitle>
+                  {item.title}
+                </MenuTitle>
+              </MenuItem>
+            )}
+          />
         </MenuWrap>
         <HelpWrap>
-        {
-          helps.map(item => (
-            <HelpItem
-              key={item.title}
-            >
-              <MenuTitle>
-                {item.title}
-              </MenuTitle>
-            </HelpItem>
-          ))
-        }
+          <FlatList
+            data={dummyHelp}
+            keyExtractor={item => item.title}
+            renderItem={({ item }) => (
+              <HelpItem>
+                <MenuTitle>
+                  {item.title}
+                </MenuTitle>
+              </HelpItem>
+            )}
+          />
         </HelpWrap>
       </ScrollView>
 
       <Footer>
         <TouchableOpacity>
-          <ImageIcon source={ICON_LAMP} size={30} />
+          <ImageIcon source={ICON_LAMP} size={24} />
         </TouchableOpacity>
         <TouchableOpacity>
-          <ImageIcon source={ICON_CODE} size={24} />
+          <ImageIcon source={ICON_CODE} size={20} />
         </TouchableOpacity>
       </Footer>
     </Container>

@@ -20,6 +20,7 @@ export default {
   ICON_HEART: require(`${PATH}icon-heart.png`),
   ICON_SHARE: require(`${PATH}icon-share.png`),
   ICON_VERIFY: require(`${PATH}icon-verify.png`),
+  ICON_SPHERE: require(`${PATH}icon-sphere.png`),
   ARROW: require(`${PATH}arrow.png`),
   ARROW_RIGHT: require(`${PATH}arrow-right.png`),
   ICON_ALERT: require(`${PATH}icon-alert.png`),

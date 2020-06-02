@@ -1,11 +1,9 @@
 import React from 'react';
-import { View } from 'react-native';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import {
   Images,
-  WIDTH,
   HEIGHT,
   MAIN_PADDING,
 } from 'src/constants';
@@ -22,6 +20,7 @@ const {
   ICON_RETWEET,
   ICON_HEART,
   ICON_SHARE,
+  ICON_SPHERE,
 } = Images;
 
 const ItemContainer = styled.View`
@@ -65,6 +64,12 @@ const NameText = styled.Text`
 `;
 
 const IdText = styled.Text`
+  font-size: 18px;
+  color: #717b85;
+  margin-left: 5px;
+`;
+
+const TimeText = styled.Text`
   font-size: 16px;
   color: #717b85;
   margin-left: 5px;
@@ -77,7 +82,7 @@ const ArrowWrap = styled.View`
 `;
 
 const ContentText = styled.Text`
-  font-size: 18px;
+  font-size: 16px;
   margin-top: 5px;
 `;
 
@@ -88,14 +93,14 @@ const ToolWrap = styled.View`
   margin-top: 10px;
 `;
 
-const ToolView = styled.View`
+const ToolView = styled.TouchableOpacity`
   flex-direction: row;
   align-items: center;
 `;
 
 const ToolText = styled.Text`
   width: 50px;
-  font-size: 16px;
+  font-size: 14px;
   color: #717b85;
   margin-horizontal: 5px;
 `;
@@ -129,21 +134,29 @@ const ThreadWrap = styled.TouchableOpacity`
 `;
 
 const ThreadText = styled.Text`
-  font-size: 18px;
+  font-size: 16px;
   color: #1da1f3;
-`;
-
-const ContentImageWrap = styled.View`
-  margin-top: 10px;
-  border-width: 1px;
-  border-color: #f2f2f2;
-  border-radius: 20px;
-  overflow: hidden;
 `;
 
 const ContentImage = styled.Image`
   width: 100%;
   aspect-ratio: ${props => props.aspectRatio || 2};
+`;
+
+const SphereWrap = styled.View`
+  flex-direction: row;
+  align-items: center;
+`;
+
+const SphereIconWrap = styled.View`
+  width: ${HEIGHT * 0.08}px;
+  align-items: flex-end;
+`;
+
+const SphereText = styled.Text`
+  font-size: 14px;
+  color: #717b85;
+  margin-left: 10px;
 `;
 
 const NewsItem = ({
@@ -163,6 +176,15 @@ const NewsItem = ({
 }) => {
   return (
     <ItemContainer>
+      {
+        !!sphere &&
+        <SphereWrap>
+          <SphereIconWrap>
+            <ImageIcon source={ICON_SPHERE} size={14} />
+          </SphereIconWrap>
+          <SphereText>{sphere}</SphereText>
+        </SphereWrap>
+      }
       <RowView>
         <AvatarWrap>
           <AvatarImage source={avatar || AVATAR} />
@@ -171,11 +193,11 @@ const NewsItem = ({
           <ArrowWrap>
             <NameWrap>
               <NameText numberOfLines={1}>{authorName}</NameText>
-              { isVerified && <ImageIcon source={ICON_VERIFY} size={18} /> }
+              { isVerified && <ImageIcon source={ICON_VERIFY} size={14} /> }
               <IdText numberOfLines={1}>{authorId}</IdText>
-              <IdText>{`• ${time}`}</IdText>
+              <TimeText>{`• ${time}`}</TimeText>
             </NameWrap>
-            <ImageIcon source={ARROW} size={18} />
+            <ImageIcon source={ARROW} size={14} />
           </ArrowWrap>
           {
             !!contentText &&
@@ -203,10 +225,10 @@ const NewsItem = ({
                   <NameText numberOfLines={1}>{contentReplied.authorName}</NameText>
                   {
                     contentReplied.isVerified &&
-                    <ImageIcon source={ICON_VERIFY} size={18} />
+                    <ImageIcon source={ICON_VERIFY} size={14} />
                   }
                   <IdText numberOfLines={1}>{contentReplied.authorId}</IdText>
-                  <IdText>{`• ${contentReplied.time}`}</IdText>
+                  <TimeText>{`• ${contentReplied.time}`}</TimeText>
                 </NameWrap>
                 {
                   !!contentReplied.contentText &&
