@@ -34,7 +34,7 @@ const ContentWrap = styled.View`
 
 const Title = styled.Text`
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   color: white;
 `;
 
@@ -45,7 +45,7 @@ const SphereWrap = styled.View`
 `;
 
 const SphereText = styled.Text`
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   color: white;
 `;
@@ -64,7 +64,7 @@ const Badge = styled.View`
 `;
 
 const TrendingText = styled.Text`
-  font-size: 16px;
+  font-size: 14px;
   color: white;
 `;
 
