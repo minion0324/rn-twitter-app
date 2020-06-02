@@ -20,6 +20,7 @@ import {
 import {
   Container,
   ImageIcon,
+  CircleButton,
 } from 'src/styles/common.styles';
 import {
   TabBarStyle,
@@ -33,6 +34,7 @@ import {
 const {
   ICON_SETTINGS,
   ERIN,
+  ICON_HAPPENING,
 } = Images;
 
 const NotificationsScreen = ({ componentId }) => {
@@ -79,6 +81,10 @@ const NotificationsScreen = ({ componentId }) => {
         }}
         useNativeDriver
       />
+
+      <CircleButton>
+        <ImageIcon source={ICON_HAPPENING} />
+      </CircleButton>
     </Container>
   );
 };

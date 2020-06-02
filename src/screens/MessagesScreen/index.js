@@ -14,11 +14,14 @@ import {
 import {
   Container,
   ImageIcon,
+  CircleButton,
 } from 'src/styles/common.styles';
 
 const {
   ICON_SETTINGS,
   ERIN,
+  ICON_HAPPENING,
+  ICON_NEW_MESSAGE,
 } = Images;
 
 const MessagesScreen = ({ componentId }) => {
@@ -32,6 +35,9 @@ const MessagesScreen = ({ componentId }) => {
         hasBorder
       />
 
+      <CircleButton>
+        <ImageIcon source={ICON_NEW_MESSAGE} />
+      </CircleButton>
     </Container>
   );
 };

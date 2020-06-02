@@ -7,8 +7,8 @@ import {
 
 const Header = styled.View`
   padding-horizontal: ${MAIN_PADDING}px;
-  border-bottom-width: 0.5px;
-  border-color: #717b85;
+  border-bottom-width: 1px;
+  border-bottom-color: #f2f2f2;
 `;
 
 const AvatarHeader = styled.View`
@@ -81,8 +81,8 @@ const HelpItem = styled.TouchableOpacity`
 `;
 
 const MenuWrap = styled.View`
-  border-bottom-width: 0.5px;
-  border-color: #717b85;
+  border-bottom-width: 1px;
+  border-bottom-color: #f2f2f2;
 `;
 
 const HelpWrap = styled.View`
@@ -95,8 +95,8 @@ const Footer = styled.View`
   justify-content: space-between;
   padding-vertical: ${HEIGHT * 0.01}px;
   padding-horizontal: ${MAIN_PADDING}px;
-  border-top-width: 0.5px;
-  border-color: #717b85;
+  border-top-width: 1px;
+  border-top-color: #f2f2f2;
 `;
 
 export {

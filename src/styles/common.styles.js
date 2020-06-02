@@ -19,8 +19,36 @@ const ImageIcon = styled.Image`
   resizeMode: contain;
 `;
 
+const Body = styled.View`
+  flex: 1;
+  background-color: #e6ecf0;
+`;
+
+const SectionWrap = styled.View`
+  width: 100%;
+  background-color: white;
+  margin-bottom: 15px;
+  border-bottom-width: 1px;
+  border-bottom-color: #f2f2f2;
+`;
+
+const CircleButton = styled.TouchableOpacity`
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  width: 72px;
+  aspect-ratio: 1;
+  border-radius: 36px;
+  background-color: #1da1f3;
+  align-items: center;
+  justify-content: center;
+`;
+
 export {
   Container,
   InnerWrap,
   ImageIcon,
+  Body,
+  SectionWrap,
+  CircleButton,
 };

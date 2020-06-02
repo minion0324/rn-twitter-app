@@ -50,7 +50,7 @@ const AvatarImage = styled.Image`
 `;
 
 const Title = styled.Text`
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
 `;
 
