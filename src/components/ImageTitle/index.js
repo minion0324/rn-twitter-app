@@ -64,7 +64,7 @@ const Badge = styled.View`
 `;
 
 const TrendingText = styled.Text`
-  font-size: 14px;
+  font-size: 16px;
   color: white;
 `;
 
