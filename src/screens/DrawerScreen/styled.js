@@ -32,7 +32,7 @@ const AvatarImage = styled.Image`
 
 const NameText = styled.Text`
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
 `;
 
 const IdText = styled.Text`

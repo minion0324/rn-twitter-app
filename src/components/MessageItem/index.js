@@ -56,12 +56,12 @@ const NameWrap = styled.View`
 
 const NameText = styled.Text`
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   margin-right: 5px;
 `;
 
 const IdText = styled.Text`
-  font-size: 16px;
+  font-size: 18px;
   color: #717b85;
   margin-left: 5px;
 `;
@@ -73,9 +73,8 @@ const TimeWrap = styled.View`
 `;
 
 const ContentText = styled.Text`
-  font-size: 18px;
+  font-size: 16px;
   color: #717b85;
-  margin-top: 5px;
 `;
 
 const MessageItem = ({
@@ -96,7 +95,7 @@ const MessageItem = ({
           <TimeWrap>
             <NameWrap>
               <NameText numberOfLines={1}>{userName}</NameText>
-              { isVerified && <ImageIcon source={ICON_VERIFY} size={18} /> }
+              { isVerified && <ImageIcon source={ICON_VERIFY} size={14} /> }
               <IdText numberOfLines={1}>{userId}</IdText>
             </NameWrap>
             <IdText>{time}</IdText>

@@ -8,7 +8,7 @@ const TabBarStyle = {
 
 const TabBarIndicatorStyle = {
   backgroundColor: '#1da1f3',
-  height: 2,
+  height: 3,
 };
 
 const TabBarLabelStyle = {

@@ -28,7 +28,7 @@ const LeftIcon = styled.TouchableOpacity`
 
 const Title = styled.Text`
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
 `;
 
 const SubTitle = styled.Text`

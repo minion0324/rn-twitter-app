@@ -37,9 +37,9 @@ const IconWrap = styled.View`
 `;
 
 const AvatarWrap = styled.View`
-  width: 45px;
+  width: 36px;
   aspect-ratio: 1;
-  border-radius: 23px;
+  border-radius: 18px;
   overflow: hidden;
   margin-right: 5px;
 `;
@@ -60,12 +60,12 @@ const ArrowWrap = styled.View`
 `;
 
 const Title = styled.Text`
-  font-size: 18px;
-  margin-top: 10px;
+  font-size: 16px;
+  margin-top: 5px;
 `;
 
 const Description = styled.Text`
-  font-size: 18px;
+  font-size: 16px;
   color: #717b85;
   margin-top: 5px;
 `;
@@ -79,7 +79,7 @@ const NotificationItem = ({
     <ItemContainer>
       <RowView>
         <IconWrap>
-          <ImageIcon source={ICON_STAR} />
+          <ImageIcon source={ICON_STAR} size={25} />
         </IconWrap>
         <ContentWrap>
           <ArrowWrap>

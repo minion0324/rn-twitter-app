@@ -31,6 +31,8 @@ const CircleButton = styled.TouchableOpacity`
   width: 56px;
   aspect-ratio: 1;
   border-radius: 28px;
+  border-width: 1px;
+  border-color: #f2f2f2;
   background-color: #1da1f3;
   align-items: center;
   justify-content: center;
@@ -38,6 +40,7 @@ const CircleButton = styled.TouchableOpacity`
 
 const SearchBar = styled.View`
   width: 100%;
+  height: 36px;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -48,20 +51,21 @@ const SearchBar = styled.View`
 `;
 
 const SearchText = styled.Text`
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   color: #657688;
 `;
 
 const SearchInput = styled.TextInput`
   width: 100%;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   padding: 0px;
+  margin: 0px;
 `;
 
 const CancelText = styled.Text`
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   color: #1da1f2;
 `;

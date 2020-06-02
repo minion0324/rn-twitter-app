@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import { TouchableOpacity } from 'react-native';
+import {
+  FlatList,
+  TouchableOpacity,
+} from 'react-native';
 import PropTypes from 'prop-types';
 import { TabView, TabBar } from 'react-native-tab-view';
 
@@ -51,7 +54,7 @@ const NotificationsScreen = ({ componentId }) => {
     { key: 'second', title: 'Mentions' },
   ]);
 
-  renderTabBar = (props) => {
+  const renderTabBar = (props) => {
     return (
       <TabBar
         {...props}
@@ -66,23 +69,25 @@ const NotificationsScreen = ({ componentId }) => {
     );
   };
 
-  renderScene = ({ route }) => {
+  const renderScene = ({ route }) => {
     const sceneData = dummyNotifications[route.key];
 
     return (
       <Body>
         <ListContainer>
-        {
-          sceneData.map(item => (
-            <TouchableOpacity key={item.id}>
-              <NotificationItem
-                avatars={item.avatars}
-                title={item.title}
-                description={item.description}
-              />
-            </TouchableOpacity>
-          ))
-        }
+          <FlatList
+            data={sceneData}
+            keyExtractor={item => (`${item.id}`)}
+            renderItem={({ item }) => (
+              <TouchableOpacity>
+                <NotificationItem
+                  avatars={item.avatars}
+                  title={item.title}
+                  description={item.description}
+                />
+              </TouchableOpacity>
+            )}
+          />
         </ListContainer>
 
         {

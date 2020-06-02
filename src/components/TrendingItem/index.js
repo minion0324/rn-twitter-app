@@ -120,7 +120,7 @@ const TrendingItem = ({
   tweets,
 }) => {
 
-  renderAuthor = () => {
+  const renderAuthor = () => {
     return (
       <AuthorWrap>
         {
