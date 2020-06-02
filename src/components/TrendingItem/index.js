@@ -31,7 +31,7 @@ const RowWrap = styled.View`
 `;
 
 const ImageWrap = styled.View`
-  width: ${WIDTH * 0.22}px;
+  width: ${WIDTH * 0.2}px;
   border-width: 1px;
   border-color: #f2f2f2;
   border-radius: 20px;
@@ -48,14 +48,13 @@ const Image = styled.Image`
 `;
 
 const Title = styled.Text`
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
 `;
 
 const AuthorWrap = styled.View`
   flex-direction: row;
   align-items: center;
-  margin-bottom: 5px;
 `;
 
 const NameText = styled.Text`
@@ -109,12 +108,8 @@ const TrendingContentText = styled(TrendingText)`
 `;
 
 const TweetsText = styled.Text`
-  font-size: 16px;
+  font-size: 14px;
   color: #717b85;
-`;
-
-const TitleWrap = styled.View`
-  margin-vertical: 5px;
 `;
 
 const TrendingItem = ({
@@ -142,7 +137,7 @@ const TrendingItem = ({
         {
           authorInfo.isVerified &&
           <IconWrap>
-            <ImageIcon source={ICON_VERIFY} size={14} />
+            <ImageIcon source={ICON_VERIFY} size={10} />
           </IconWrap>
         }
         {
@@ -190,11 +185,9 @@ const TrendingItem = ({
                   : `Trending in ${trending}`
                 }
               </TrendingText>
-              <ImageIcon source={ARROW} size={18} />
+              <ImageIcon source={ARROW} size={12} />
             </RowWrap>
-            <TitleWrap>
-              <Title numberOfLines={3}>{title}</Title>
-            </TitleWrap>
+            <Title numberOfLines={3}>{title}</Title>
             {
               !!tweets && <TweetsText>{`${tweets} Tweets`}</TweetsText>
             }

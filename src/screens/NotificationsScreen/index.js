@@ -102,7 +102,7 @@ const NotificationsScreen = ({ componentId }) => {
         title={'Notifications'}
         avatar={ERIN}
         onPressLeft={() => showDrawer(componentId)}
-        rightIcon={<ImageIcon source={ICON_SETTINGS} />}
+        rightIcon={<ImageIcon source={ICON_SETTINGS} size={25} />}
       />
 
       <TabView

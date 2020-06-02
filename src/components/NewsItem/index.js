@@ -197,7 +197,7 @@ const NewsItem = ({
               <IdText numberOfLines={1}>{authorId}</IdText>
               <TimeText>{`• ${time}`}</TimeText>
             </NameWrap>
-            <ImageIcon source={ARROW} size={14} />
+            <ImageIcon source={ARROW} size={12} />
           </ArrowWrap>
           {
             !!contentText &&

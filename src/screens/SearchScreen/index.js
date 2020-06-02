@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import {
-  View,
+  FlatList,
   TouchableOpacity,
   TouchableWithoutFeedback,
 } from 'react-native';
@@ -68,18 +68,18 @@ const SearchScreen = ({ componentId }) => {
 
   const refInput = useRef();
 
-  activeSearch = () => {
+  const activeSearch = () => {
     setSearchActive(true);
   }
 
-  deactiveSearch = () => {
+  const deactiveSearch = () => {
     if (!searchActive) return;
 
     setSearchActive(false);
     refInput.current.blur();
   }
 
-  renderSearchBar = () => {
+  const renderSearchBar = () => {
     return (
       <TouchableWithoutFeedback
         onPress={activeSearch}
@@ -101,7 +101,7 @@ const SearchScreen = ({ componentId }) => {
     );
   };
 
-  renderTabBar = (props) => {
+  const renderTabBar = (props) => {
     return (
       <TabBar
         {...props}
@@ -117,93 +117,114 @@ const SearchScreen = ({ componentId }) => {
     );
   };
 
-  renderScene = ({ route }) => {
+  const renderTitle = (title) => {
+    return (
+      title &&
+      <SectionWrap>
+        <TouchableOpacity>
+          <ImageTitle
+            image={title.image}
+            title={title.title}
+            sphere={title.sphere}
+            time={title.time}
+            badge={title.badge}
+            trending={title.trending}
+          />
+        </TouchableOpacity>
+      </SectionWrap>
+    );
+  };
+
+  const renderTrendings = (trendings) => {
+    return (
+      trendings && trendings.length > 0 &&
+      <SectionWrap>
+        <FlatList
+          data={trendings}
+          keyExtractor={item => (`${item.id}`)}
+          renderItem={({ item }) => (
+            <TouchableOpacity>
+              <TrendingItem
+                title={item.title}
+                trending={item.trending}
+                trendingNumber={item.trendingNumber}
+                authorInfo={item.authorInfo}
+                tweets={item.tweets}
+              />
+            </TouchableOpacity>
+          )}
+        />
+      </SectionWrap>
+    );
+  };
+
+  const renderNews = (news) => {
+    return (
+      <FlatList
+        data={news}
+        keyExtractor={item => (`${item.id}`)}
+        renderItem={({ item }) => (
+          <NewsItem
+            key={item.id}
+            avatar={item.avatar}
+            authorName={item.authorName}
+            authorId={item.authorId}
+            isVerified={item.isVerified}
+            time={item.time}
+            sphere={item.sphere}
+            contentText={item.contentText}
+            contentImage={item.contentImage}
+            contentReplied={item.contentReplied}
+            countReply={item.countReply}
+            countRetweet={item.countRetweet}
+            countHeart={item.countHeart}
+            aspectRatio={item.aspectRatio}
+          />
+        )}
+      />
+    );
+  }
+
+  const renderFollowings = (followings) => {
+    return (
+      followings && followings.length > 0 &&
+      followings.map(following => (
+        <SectionWrap key={following.title}>
+          <TopBar
+            title={following.title}
+            leftIcon={<ImageIcon source={ICON_ALERT} />}
+            rightIcon={<ImageIcon source={ARROW} size={12} />}
+          />
+
+          { renderNews(following.news) }
+
+          <ExpandItem
+            title={following.title}
+            leftIcon={<ImageIcon source={ICON_ALERT} />}
+            followText={'Following'}
+          />
+          <TouchableOpacity>
+            <BottomBar
+              title={'Show more'}
+              rightIcon={<ImageIcon source={ARROW_RIGHT} size={12} />}
+            />
+          </TouchableOpacity>
+        </SectionWrap>
+      ))
+    );
+  }
+
+  const renderScene = ({ route }) => {
     const sceneData = dummySearch[route.key];
 
     return (
       <Body>
         <ListContainer>
-          {
-            sceneData && sceneData.title &&
-            <SectionWrap>
-              <TouchableOpacity>
-                <ImageTitle
-                  image={sceneData.title.image}
-                  title={sceneData.title.title}
-                  sphere={sceneData.title.sphere}
-                  time={sceneData.title.time}
-                  badge={sceneData.title.badge}
-                  trending={sceneData.title.trending}
-                />
-              </TouchableOpacity>
-            </SectionWrap>
-          }
+          { renderTitle(sceneData.title) }
 
-          {
-            sceneData &&
-            sceneData.trendings &&
-            sceneData.trendings.length > 0 &&
-            <SectionWrap>
-              {
-                sceneData.trendings.map(item => (
-                  <TouchableOpacity key={item.id}>
-                    <TrendingItem
-                      title={item.title}
-                      trending={item.trending}
-                      trendingNumber={item.trendingNumber}
-                      authorInfo={item.authorInfo}
-                      tweets={item.tweets}
-                    />
-                  </TouchableOpacity>
-                ))
-              }
-            </SectionWrap>
-          }
+          { renderTrendings(sceneData.trendings) }
 
-          {
-            sceneData &&
-            sceneData.followings &&
-            sceneData.followings.length > 0 &&
-            sceneData.followings.map(following => (
-              <SectionWrap key={following.title}>
-                <TopBar
-                  title={following.title}
-                  leftIcon={<ImageIcon source={ICON_ALERT} />}
-                  rightIcon={<ImageIcon source={ARROW} size={18} />}
-                />
-                {
-                  following.news.map((item) => (
-                    <NewsItem
-                      key={item.id}
-                      avatar={item.avatar}
-                      authorName={item.authorName}
-                      authorId={item.authorId}
-                      isVerified={item.isVerified}
-                      time={item.time}
-                      contentText={item.contentText}
-                      contentImage={item.contentImage}
-                      contentReplied={item.contentReplied}
-                      countReply={item.countReply}
-                      countRetweet={item.countRetweet}
-                      countHeart={item.countHeart}
-                      aspectRatio={item.aspectRatio}
-                    />
-                  ))
-                }
-                <ExpandItem
-                  title={following.title}
-                  leftIcon={<ImageIcon source={ICON_ALERT} />}
-                  followText={'Following'}
-                />
-                <TouchableOpacity>
-                  <BottomBar
-                    title={'Show more'}
-                    rightIcon={<ImageIcon source={ARROW_RIGHT} size={18} />}
-                  />
-                </TouchableOpacity>
-              </SectionWrap>
-            ))
-          }
+          { renderFollowings(sceneData.followings) }
         </ListContainer>
       </Body>
     );
@@ -219,7 +240,7 @@ const SearchScreen = ({ componentId }) => {
         rightIcon={
           searchActive
           ? <CancelText>Cancel</CancelText>
-          : <ImageIcon source={ICON_SETTINGS} />
+          : <ImageIcon source={ICON_SETTINGS} size={25} />
         }
         onPressRight={deactiveSearch}
       />

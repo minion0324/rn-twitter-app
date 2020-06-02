@@ -82,7 +82,7 @@ const MessagesScreen = ({ componentId }) => {
         rightIcon={
           searchActive
           ? <CancelText>Cancel</CancelText>
-          : <ImageIcon source={ICON_SETTINGS} />
+          : <ImageIcon source={ICON_SETTINGS} size={25} />
         }
         onPressRight={deactiveSearch}
         hasBorder={searchActive}

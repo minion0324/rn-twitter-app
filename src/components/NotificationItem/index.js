@@ -92,7 +92,7 @@ const NotificationItem = ({
                 ))
               }
             </RowView>
-            <ImageIcon source={ARROW} size={18} />
+            <ImageIcon source={ARROW} size={12} />
           </ArrowWrap>
           <Title>{title}</Title>
           <Description numberOfLines={4}>{description}</Description>
