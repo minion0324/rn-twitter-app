@@ -5,3 +5,5 @@ export { default as FollowItem } from './FollowItem';
 export { default as TopBar } from './TopBar';
 export { default as BottomBar } from './BottomBar';
 export { default as ExpandItem } from './ExpandItem';
+export { default as ImageTitle } from './ImageTitle';
+export { default as TrendingItem } from './TrendingItem';

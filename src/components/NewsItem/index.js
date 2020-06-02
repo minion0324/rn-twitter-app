@@ -202,11 +202,11 @@ const NewsItem = ({
                   </RepliedAvatarWrap>
                   <NameText numberOfLines={1}>{contentReplied.authorName}</NameText>
                   {
-                    contentReplied.isVerified
-                    && <ImageIcon source={ICON_VERIFY} size={18} />
+                    contentReplied.isVerified &&
+                    <ImageIcon source={ICON_VERIFY} size={18} />
                   }
                   <IdText numberOfLines={1}>{contentReplied.authorId}</IdText>
-                  <IdText>{`- ${contentReplied.time}`}</IdText>
+                  <IdText>{`• ${contentReplied.time}`}</IdText>
                 </NameWrap>
                 {
                   !!contentReplied.contentText &&
