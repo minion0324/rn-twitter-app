@@ -1,14 +1,19 @@
 import React, { useState, useRef } from 'react';
 import {
+  TouchableOpacity,
   TouchableWithoutFeedback,
 } from 'react-native';
 import PropTypes from 'prop-types';
 
 import {
   Header,
+  ListContainer,
+  MessageItem,
+  FullAlert,
 } from 'src/components';
 import {
   Images,
+  DummyData,
 } from 'src/constants';
 import {
   showDrawer,
@@ -34,6 +39,10 @@ const {
   ICON_HAPPENING,
   ICON_NEW_MESSAGE,
 } = Images;
+
+const {
+  dummyMessages,
+} = DummyData;
 
 const MessagesScreen = ({ componentId }) => {
   const [ searchActive, setSearchActive ] = useState(false);
@@ -79,20 +88,48 @@ const MessagesScreen = ({ componentId }) => {
         hasBorder={searchActive}
       />
 
-      {
-        !searchActive &&
-        <SearchWrap>
-          <TouchableWithoutFeedback
-            onPress={activeSearch}
-          >
-            <SearchBar>
-              <SearchText>Search for people and groups</SearchText>
-            </SearchBar>
-          </TouchableWithoutFeedback>
-        </SearchWrap>
-      }
-
       <Body>
+        {
+          !searchActive &&
+          <SearchWrap>
+            <TouchableWithoutFeedback
+              onPress={activeSearch}
+            >
+              <SearchBar>
+                <SearchText>Search for people and groups</SearchText>
+              </SearchBar>
+            </TouchableWithoutFeedback>
+          </SearchWrap>
+        }
+
+        <ListContainer>
+          {
+            dummyMessages.map((item) => (
+              <TouchableOpacity key={item.userId}>
+                <MessageItem
+                  avatar={item.avatar}
+                  userName={item.userName}
+                  userId={item.userId}
+                  isVerified={item.isVerified}
+                  time={item.time}
+                  lastMessage={item.lastMessage}
+                />
+              </TouchableOpacity>
+            ))
+          }
+        </ListContainer>
+
+        {
+          !dummyMessages.length &&
+          <FullAlert
+            title={'Send a message, get a message'}
+            subTitle={
+              'Direct Messages are private conversations between you and other people on Twitter.'
+              + ' Share Tweets, media, and more!'
+            }
+            buttonText={'Write a message'}
+          />
+        }
       </Body>
 
       <CircleButton>

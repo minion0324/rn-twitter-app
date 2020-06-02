@@ -7,3 +7,5 @@ export { default as BottomBar } from './BottomBar';
 export { default as ExpandItem } from './ExpandItem';
 export { default as ImageTitle } from './ImageTitle';
 export { default as TrendingItem } from './TrendingItem';
+export { default as MessageItem } from './MessageItem';
+export { default as FullAlert } from './FullAlert';

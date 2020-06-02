@@ -9,6 +9,7 @@ const SearchWrap = styled.View`
   padding-horizontal: ${MAIN_PADDING}px;
   border-bottom-width: 1px;
   border-bottom-color: #f2f2f2;
+  background-color: white;
 `;
 
 export {

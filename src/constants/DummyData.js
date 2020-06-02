@@ -529,10 +529,30 @@ const dummySearch = {
   },
 };
 
+const dummyMessages = [
+  {
+    avatar: AVATAR1,
+    userName: 'Overtime',
+    userId: '@overtime',
+    isVerified: false,
+    time: '1h',
+    lastMessage: 'You: It\'s nice to meet you.',
+  },
+  {
+    avatar: AVATAR2,
+    userName: 'Ashok Swain',
+    userId: '@ashoswai',
+    isVerified: true,
+    time: '3h',
+    lastMessage: 'You: Thanks.',
+  },
+];
+
 export default {
   dummyNews,
   dummyFollows,
   dummyExpands,
   dummyTabs,
   dummySearch,
+  dummyMessages,
 };
