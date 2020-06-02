@@ -7,8 +7,13 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import {
+  HEIGHT,
   MAIN_PADDING,
 } from 'src/constants';
+
+const scrollContentContainerStyle = {
+  paddingBottom: HEIGHT * 0.12,
+};
 
 function wait(timeout) {
   return new Promise(resolve => {
@@ -31,6 +36,7 @@ const ListContainer = ({
 
   return (
     <ScrollView
+      contentContainerStyle={scrollContentContainerStyle}
       refreshControl={
         <RefreshControl
           refreshing={refreshing}

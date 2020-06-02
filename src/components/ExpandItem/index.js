@@ -37,12 +37,12 @@ const FollowButton = styled.TouchableOpacity`
   border-color: #1da1f3;
   border-width: 1px;
   border-radius: 20px;
+  background-color: ${props => (props.isFollow ? 'white' : '#1da1f3')};
 `;
 
 const FollowText = styled.Text`
   font-size: 18px;
-  font-weight: 600;
-  color: #1da1f3;
+  color: ${props => (props.isFollow ? '#1da1f3' : 'white')};
 `;
 
 const ExpandItem = ({
@@ -59,8 +59,14 @@ const ExpandItem = ({
         }
         <Title>{title}</Title>
       </LeftWrap>
-      <FollowButton>
-        <FollowText>{followText}</FollowText>
+      <FollowButton
+        isFollow={followText === 'Follow'}
+      >
+        <FollowText
+          isFollow={followText === 'Follow'}
+        >
+          {followText}
+        </FollowText>
       </FollowButton>
     </ItemContainer>
   );

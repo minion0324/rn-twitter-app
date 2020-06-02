@@ -88,7 +88,6 @@ const FollowButton = styled.TouchableOpacity`
 
 const FollowText = styled.Text`
   font-size: 18px;
-  font-weight: 600;
   color: #1da1f3;
 `;
 
