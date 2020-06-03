@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import {
+  FlatList,
   TouchableOpacity,
   TouchableWithoutFeedback,
 } from 'react-native';
@@ -36,7 +37,6 @@ import {
 const {
   ICON_SETTINGS,
   ERIN,
-  ICON_HAPPENING,
   ICON_NEW_MESSAGE,
 } = Images;
 
@@ -49,11 +49,11 @@ const MessagesScreen = ({ componentId }) => {
 
   const refInput = useRef();
 
-  activeSearch = () => {
+  const activeSearch = () => {
     setSearchActive(true);
   }
 
-  deactiveSearch = () => {
+  const deactiveSearch = () => {
     if (!searchActive) return;
 
     setSearchActive(false);
@@ -103,9 +103,11 @@ const MessagesScreen = ({ componentId }) => {
         }
 
         <ListContainer>
-          {
-            dummyMessages.map((item) => (
-              <TouchableOpacity key={item.userId}>
+          <FlatList
+            data={dummyMessages}
+            keyExtractor={item => item.userId}
+            renderItem={({ item }) => (
+              <TouchableOpacity>
                 <MessageItem
                   avatar={item.avatar}
                   userName={item.userName}
@@ -115,8 +117,8 @@ const MessagesScreen = ({ componentId }) => {
                   lastMessage={item.lastMessage}
                 />
               </TouchableOpacity>
-            ))
-          }
+            )}
+          />
         </ListContainer>
 
         {

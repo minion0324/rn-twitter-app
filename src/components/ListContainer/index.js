@@ -4,11 +4,9 @@ import {
   RefreshControl,
 } from 'react-native';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
 import {
   HEIGHT,
-  MAIN_PADDING,
 } from 'src/constants';
 
 const scrollContentContainerStyle = {
