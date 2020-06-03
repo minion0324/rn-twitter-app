@@ -138,9 +138,14 @@ const ThreadText = styled.Text`
   color: #1da1f3;
 `;
 
-const ContentImage = styled.Image`
+const ContentImageWrap = styled.View`
   width: 100%;
   aspect-ratio: ${props => props.aspectRatio || 2};
+`;
+
+const ContentImage = styled.Image`
+  width: 100%;
+  height: 100%;
 `;
 
 const SphereWrap = styled.View`
@@ -207,10 +212,9 @@ const NewsItem = ({
           {
             !!contentImage &&
             <RoundWrap>
-              <ContentImage
-                aspectRatio={aspectRatio}
-                source={{ uri: contentImage }}
-              />
+              <ContentImageWrap aspectRatio={aspectRatio}>
+                <ContentImage source={contentImage} />
+              </ContentImageWrap>
             </RoundWrap>
           }
 
@@ -241,7 +245,9 @@ const NewsItem = ({
               {
                 !!contentReplied.contentImage &&
                 <BorderWrap>
-                  <ContentImage source={{ uri: contentReplied.contentImage }} />
+                  <ContentImageWrap>
+                    <ContentImage source={contentReplied.contentImage} />
+                  </ContentImageWrap>
                 </BorderWrap>
               }
 
@@ -280,7 +286,7 @@ NewsItem.propTypes = {
   sphere: PropTypes.string,
   time: PropTypes.string.isRequired,
   contentText: PropTypes.string,
-  contentImage: PropTypes.string,
+  contentImage: PropTypes.number,
   contentReplied: PropTypes.object,
   countReply: PropTypes.string,
   countRetweet: PropTypes.string,
@@ -293,7 +299,7 @@ NewsItem.defaultProps = {
   isVerified: false,
   sphere: '',
   contentText: '',
-  contentImage: '',
+  contentImage: null,
   contentReplied: null,
   countReply: '0',
   countRetweet: '0',

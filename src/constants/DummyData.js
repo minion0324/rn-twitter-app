@@ -6,6 +6,9 @@ const {
   AVATAR1,
   AVATAR2,
   AVATAR3,
+  IMAGE1,
+  IMAGE2,
+  IMAGE3,
   ICON_PROFILE,
   ICON_LISTS,
   ICON_TOPICS,
@@ -34,7 +37,7 @@ const dummyNews = [
       contentText:
         'That’s why Best E-Commerce Builders 2018 offers a methodical comparison of the most popular, highly-rated website builders.'
         + '\n\nWe provide information based on first-hand experience with website builders to help you make the best decision for your particular needs and get your store online in no time.',
-      contentImage: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000106/24a24af6-a2c6-4196-a964-51dff8a165d9-023fcb09cba6b5cdee53afe90e810f4b.jpeg',
+      contentImage: IMAGE1,
     },
     countReply: '1',
     countRetweet: '321',
@@ -51,7 +54,7 @@ const dummyNews = [
     contentText:
       'That’s why Best E-Commerce Builders 2018 offers a methodical comparison of the most popular, highly-rated website builders.'
       + '\n\nWe provide information based on first-hand experience with website builders to help you make the best decision for your particular needs and get your store online in no time.',
-    contentImage: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000106/24a24af6-a2c6-4196-a964-51dff8a165d9-023fcb09cba6b5cdee53afe90e810f4b.jpeg',
+    contentImage: IMAGE1,
     countReply: '102',
     countRetweet: '367',
     countHeart: '21.4k',
@@ -78,7 +81,7 @@ const dummyNews = [
     authorId: '@robert',
     isVerified: false,
     time: '3h',
-    contentImage: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000120/8b2516bf-0807-4649-9495-f18237d82c7c-023fcb09cba6b5cdee53afe90e810f4b.jpeg',
+    contentImage: IMAGE2,
     countReply: '12',
     countRetweet: '23',
     countHeart: '10',
@@ -132,7 +135,7 @@ const dummyTabs = [
 const dummySearch = {
   first: {
     title: {
-      image: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000106/24a24af6-a2c6-4196-a964-51dff8a165d9-023fcb09cba6b5cdee53afe90e810f4b.jpeg',
+      image: IMAGE3,
       title: 'With the rise of online shopping, making the move to an online store has countless benefits.',
       sphere: 'US news',
       time: 'LIVE',
@@ -144,7 +147,7 @@ const dummySearch = {
         title: 'COVID-19: Updates for the US',
         trending: '',
         authorInfo: {
-          image: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000120/8b2516bf-0807-4649-9495-f18237d82c7c-023fcb09cba6b5cdee53afe90e810f4b.jpeg',
+          image: IMAGE1,
           id: 'COVID-19',
           time: 'Last night',
           avatar: AVATAR1,
@@ -169,7 +172,7 @@ const dummySearch = {
         title: 'Do you have a particular model in mind? Must-have features?',
         trending: 'Antifa',
         authorInfo: {
-          image: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000195/7a670ed5-9a47-4364-ae2a-ab86bc944eb9-023fcb09cba6b5cdee53afe90e810f4b.jpg',
+          image: IMAGE2,
           id: 'COVID-19',
           time: 'Yesterday',
           avatar: AVATAR1,
@@ -194,7 +197,7 @@ const dummySearch = {
         title: 'Do you have a particular model in mind? Must-have features?',
         trending: 'Antifa',
         authorInfo: {
-          image: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000002/9dc8b663-d35b-4ae0-a25d-aa585274cd94-023fcb09cba6b5cdee53afe90e810f4b.jpeg',
+          image: IMAGE3,
           id: 'US news',
           time: 'May 30, 2020',
           avatar: AVATAR1,
@@ -280,7 +283,7 @@ const dummySearch = {
   },
   third: {
     title: {
-      image: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000106/24a24af6-a2c6-4196-a964-51dff8a165d9-023fcb09cba6b5cdee53afe90e810f4b.jpeg',
+      image: IMAGE1,
       title: 'With the rise of online shopping, making the move to an online store has countless benefits.',
       sphere: 'US news',
       time: 'LIVE',
@@ -292,7 +295,7 @@ const dummySearch = {
         id: 0,
         title: 'Before you dive in, make sure to think about the kind of website you’d like for your business.',
         authorInfo: {
-          image: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000120/8b2516bf-0807-4649-9495-f18237d82c7c-023fcb09cba6b5cdee53afe90e810f4b.jpeg',
+          image: IMAGE2,
           id: 'US news',
           time: '1h',
           avatar: AVATAR1,
@@ -305,7 +308,7 @@ const dummySearch = {
           'That’s why Best E-Commerce Builders 2018 offers a methodical comparison of the most popular, highly-rated website builders.'
           + '\n\nWe provide information based on first-hand experience with website builders to help you make the best decision for your particular needs and get your store online in no time.',
         authorInfo: {
-          image: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000002/9dc8b663-d35b-4ae0-a25d-aa585274cd94-023fcb09cba6b5cdee53afe90e810f4b.jpeg',
+          image: IMAGE3,
           id: 'US news',
           time: 'Yesterday',
           avatar: AVATAR1,
@@ -316,7 +319,7 @@ const dummySearch = {
         id: 2,
         title: 'That’s why Best E-Commerce Builders 2018 offers a methodical comparison of the most popular, highly-rated website builders.',
         authorInfo: {
-          image: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000195/7a670ed5-9a47-4364-ae2a-ab86bc944eb9-023fcb09cba6b5cdee53afe90e810f4b.jpg',
+          image: IMAGE1,
           id: 'Elemental',
           time: 'Last night',
           avatar: AVATAR1,
@@ -327,7 +330,7 @@ const dummySearch = {
         id: 3,
         title: 'Do you have a particular model in mind? Must-have features?',
         authorInfo: {
-          image: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000002/9dc8b663-d35b-4ae0-a25d-aa585274cd94-023fcb09cba6b5cdee53afe90e810f4b.jpeg',
+          image: IMAGE2,
           id: 'US news',
           time: 'May 30, 2020',
           avatar: AVATAR1,
@@ -338,7 +341,7 @@ const dummySearch = {
         id: 4,
         title: 'That’s why Best E-Commerce Builders 2018 offers a methodical comparison of the most popular, highly-rated website builders.',
         authorInfo: {
-          image: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000195/7a670ed5-9a47-4364-ae2a-ab86bc944eb9-023fcb09cba6b5cdee53afe90e810f4b.jpg',
+          image: IMAGE3,
           id: 'Elemental',
           time: 'Last night',
           avatar: AVATAR1,
@@ -349,7 +352,7 @@ const dummySearch = {
         id: 5,
         title: 'Do you have a particular model in mind? Must-have features?',
         authorInfo: {
-          image: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000002/9dc8b663-d35b-4ae0-a25d-aa585274cd94-023fcb09cba6b5cdee53afe90e810f4b.jpeg',
+          image: IMAGE1,
           id: 'US news',
           time: 'May 30, 2020',
           avatar: AVATAR1,
@@ -360,7 +363,7 @@ const dummySearch = {
   },
   fourth: {
     title: {
-      image: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000195/7a670ed5-9a47-4364-ae2a-ab86bc944eb9-023fcb09cba6b5cdee53afe90e810f4b.jpg',
+      image: IMAGE2,
       title: 'Before you dive in, make sure to think about the kind of website you’d like for your business.',
       sphere: 'Football',
       time: 'This afternoon',
@@ -370,7 +373,7 @@ const dummySearch = {
         id: 0,
         title: 'Before you dive in, make sure to think about the kind of website you’d like for your business.',
         authorInfo: {
-          image: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000120/8b2516bf-0807-4649-9495-f18237d82c7c-023fcb09cba6b5cdee53afe90e810f4b.jpeg',
+          image: IMAGE3,
           id: 'US news',
           time: '1h',
           avatar: AVATAR1,
@@ -383,7 +386,7 @@ const dummySearch = {
           'That’s why Best E-Commerce Builders 2018 offers a methodical comparison of the most popular, highly-rated website builders.'
           + '\n\nWe provide information based on first-hand experience with website builders to help you make the best decision for your particular needs and get your store online in no time.',
         authorInfo: {
-          image: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000002/9dc8b663-d35b-4ae0-a25d-aa585274cd94-023fcb09cba6b5cdee53afe90e810f4b.jpeg',
+          image: IMAGE1,
           id: 'US news',
           time: 'Yesterday',
           avatar: AVATAR1,
@@ -394,7 +397,7 @@ const dummySearch = {
         id: 2,
         title: 'That’s why Best E-Commerce Builders 2018 offers a methodical comparison of the most popular, highly-rated website builders.',
         authorInfo: {
-          image: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000195/7a670ed5-9a47-4364-ae2a-ab86bc944eb9-023fcb09cba6b5cdee53afe90e810f4b.jpg',
+          image: IMAGE2,
           id: 'Elemental',
           time: 'Last night',
           avatar: AVATAR1,
@@ -405,7 +408,7 @@ const dummySearch = {
         id: 3,
         title: 'Do you have a particular model in mind? Must-have features?',
         authorInfo: {
-          image: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000002/9dc8b663-d35b-4ae0-a25d-aa585274cd94-023fcb09cba6b5cdee53afe90e810f4b.jpeg',
+          image: IMAGE3,
           id: 'US news',
           time: 'May 30, 2020',
           avatar: AVATAR1,
@@ -416,7 +419,7 @@ const dummySearch = {
         id: 4,
         title: 'That’s why Best E-Commerce Builders 2018 offers a methodical comparison of the most popular, highly-rated website builders.',
         authorInfo: {
-          image: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000195/7a670ed5-9a47-4364-ae2a-ab86bc944eb9-023fcb09cba6b5cdee53afe90e810f4b.jpg',
+          image: IMAGE1,
           id: 'Elemental',
           time: 'Last night',
           avatar: AVATAR1,
@@ -427,7 +430,7 @@ const dummySearch = {
         id: 5,
         title: 'Do you have a particular model in mind? Must-have features?',
         authorInfo: {
-          image: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000002/9dc8b663-d35b-4ae0-a25d-aa585274cd94-023fcb09cba6b5cdee53afe90e810f4b.jpeg',
+          image: IMAGE2,
           id: 'US news',
           time: 'May 30, 2020',
           avatar: AVATAR1,
@@ -438,7 +441,7 @@ const dummySearch = {
   },
   fifth: {
     title: {
-      image: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000195/7a670ed5-9a47-4364-ae2a-ab86bc944eb9-023fcb09cba6b5cdee53afe90e810f4b.jpg',
+      image: IMAGE3,
       title: 'Do you have a particular model in mind? Must-have features?',
       sphere: 'Animals',
       time: 'May 30, 2020',
@@ -448,7 +451,7 @@ const dummySearch = {
         id: 0,
         title: 'Before you dive in, make sure to think about the kind of website you’d like for your business.',
         authorInfo: {
-          image: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000120/8b2516bf-0807-4649-9495-f18237d82c7c-023fcb09cba6b5cdee53afe90e810f4b.jpeg',
+          image: IMAGE1,
           id: 'US news',
           time: '1h',
           avatar: AVATAR1,
@@ -461,7 +464,7 @@ const dummySearch = {
           'That’s why Best E-Commerce Builders 2018 offers a methodical comparison of the most popular, highly-rated website builders.'
           + '\n\nWe provide information based on first-hand experience with website builders to help you make the best decision for your particular needs and get your store online in no time.',
         authorInfo: {
-          image: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000002/9dc8b663-d35b-4ae0-a25d-aa585274cd94-023fcb09cba6b5cdee53afe90e810f4b.jpeg',
+          image: IMAGE2,
           id: 'US news',
           time: 'Yesterday',
           avatar: AVATAR1,
@@ -472,7 +475,7 @@ const dummySearch = {
         id: 2,
         title: 'That’s why Best E-Commerce Builders 2018 offers a methodical comparison of the most popular, highly-rated website builders.',
         authorInfo: {
-          image: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000195/7a670ed5-9a47-4364-ae2a-ab86bc944eb9-023fcb09cba6b5cdee53afe90e810f4b.jpg',
+          image: IMAGE3,
           id: 'Elemental',
           time: 'Last night',
           avatar: AVATAR1,
@@ -483,7 +486,7 @@ const dummySearch = {
         id: 3,
         title: 'Do you have a particular model in mind? Must-have features?',
         authorInfo: {
-          image: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000002/9dc8b663-d35b-4ae0-a25d-aa585274cd94-023fcb09cba6b5cdee53afe90e810f4b.jpeg',
+          image: IMAGE1,
           id: 'US news',
           time: 'May 30, 2020',
           avatar: AVATAR1,
@@ -494,7 +497,7 @@ const dummySearch = {
         id: 4,
         title: 'That’s why Best E-Commerce Builders 2018 offers a methodical comparison of the most popular, highly-rated website builders.',
         authorInfo: {
-          image: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000195/7a670ed5-9a47-4364-ae2a-ab86bc944eb9-023fcb09cba6b5cdee53afe90e810f4b.jpg',
+          image: IMAGE2,
           id: 'Elemental',
           time: 'Last night',
           avatar: AVATAR1,
@@ -505,7 +508,7 @@ const dummySearch = {
         id: 5,
         title: 'Do you have a particular model in mind? Must-have features?',
         authorInfo: {
-          image: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000002/9dc8b663-d35b-4ae0-a25d-aa585274cd94-023fcb09cba6b5cdee53afe90e810f4b.jpeg',
+          image: IMAGE3,
           id: 'US news',
           time: 'May 30, 2020',
           avatar: AVATAR1,
@@ -516,7 +519,7 @@ const dummySearch = {
   },
   sixth: {
     title: {
-      image: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000195/7a670ed5-9a47-4364-ae2a-ab86bc944eb9-023fcb09cba6b5cdee53afe90e810f4b.jpg',
+      image: IMAGE1,
       title: 'Do you have a particular model in mind? Must-have features?',
       sphere: 'Animals',
       time: 'May 30, 2020',
@@ -526,7 +529,7 @@ const dummySearch = {
         id: 0,
         title: 'Before you dive in, make sure to think about the kind of website you’d like for your business.',
         authorInfo: {
-          image: 'https://storage.googleapis.com/shift-0001/__sized__/recipe/00000/00000120/8b2516bf-0807-4649-9495-f18237d82c7c-023fcb09cba6b5cdee53afe90e810f4b.jpeg',
+          image: IMAGE2,
           id: 'US news',
           time: '1h',
           avatar: AVATAR1,

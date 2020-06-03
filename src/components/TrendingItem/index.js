@@ -32,6 +32,7 @@ const RowWrap = styled.View`
 
 const ImageWrap = styled.View`
   width: ${WIDTH * 0.2}px;
+  aspect-ratio: 1;
   border-width: 1px;
   border-color: #f2f2f2;
   border-radius: 20px;
@@ -42,9 +43,9 @@ const ContentWrap = styled.View`
   width: ${WIDTH * 0.66}px;
 `;
 
-const Image = styled.Image`
+const ContentImage = styled.Image`
   width: 100%;
-  aspect-ratio: 1;
+  height: 100%;
 `;
 
 const Title = styled.Text`
@@ -168,7 +169,7 @@ const TrendingItem = ({
                 }
               </ContentWrap>
               <ImageWrap>
-                <Image source={{ uri: authorInfo.image }} />
+                <ContentImage source={authorInfo.image} />
               </ImageWrap>
             </RowWrap>
           : <View>

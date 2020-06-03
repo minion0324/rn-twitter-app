@@ -91,7 +91,7 @@ const ImageTitle = ({
   return (
     <ItemContainer>
       <OverlayWrap>
-        <FullImage source={{ uri: image }} />
+        <FullImage source={image} />
       </OverlayWrap>
       <ContentWrap>
         <SphereWrap>
@@ -121,7 +121,7 @@ const ImageTitle = ({
 }
 
 ImageTitle.propTypes = {
-  image: PropTypes.string.isRequired,
+  image: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   sphere: PropTypes.string.isRequired,
   time: PropTypes.string.isRequired,
