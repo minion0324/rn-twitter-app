@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+import {
+  HEIGHT,
+} from 'src/constants';
+
 const Container = styled.SafeAreaView`
   flex: 1;
   background-color: white;
@@ -28,9 +32,9 @@ const CircleButton = styled.TouchableOpacity`
   position: absolute;
   right: 15px;
   bottom: 15px;
-  width: 56px;
+  width: ${HEIGHT * 0.09}px;
   aspect-ratio: 1;
-  border-radius: 28px;
+  border-radius: ${HEIGHT * 0.045}px;
   border-width: 1px;
   border-color: #f2f2f2;
   background-color: #1da1f3;
