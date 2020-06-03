@@ -135,7 +135,7 @@ const MessagesScreen = ({ componentId }) => {
       </Body>
 
       <CircleButton>
-        <ImageIcon source={ICON_NEW_MESSAGE} />
+        <ImageIcon source={ICON_NEW_MESSAGE} size={22} />
       </CircleButton>
     </Container>
   );

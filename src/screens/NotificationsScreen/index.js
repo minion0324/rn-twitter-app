@@ -123,7 +123,7 @@ const NotificationsScreen = ({ componentId }) => {
       />
 
       <CircleButton>
-        <ImageIcon source={ICON_HAPPENING} />
+        <ImageIcon source={ICON_HAPPENING} size={25} />
       </CircleButton>
     </Container>
   );
