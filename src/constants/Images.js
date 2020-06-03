@@ -31,4 +31,7 @@ export default {
   AVATAR1: require(`${PATH}contents/avatar1.png`),
   AVATAR2: require(`${PATH}contents/avatar2.png`),
   AVATAR3: require(`${PATH}contents/avatar3.png`),
+  IMAGE1: require(`${PATH}contents/image1.jpg`),
+  IMAGE2: require(`${PATH}contents/image2.jpeg`),
+  IMAGE3: require(`${PATH}contents/image3.jpeg`),
 };
